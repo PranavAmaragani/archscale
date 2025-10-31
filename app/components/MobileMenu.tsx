@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-
 import Link from "next/link";
 import Image from "next/image";
 import { X } from "lucide-react";
@@ -33,12 +32,13 @@ export default function MobileMenu({
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
-          transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-          className={`fixed inset-0 z-[999] px-6 py-8 
-          ${scrolled ? "bg-[#EEEDEA] text-black" : "bg-black text-white"}`}
+          transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
+          className={`fixed inset-0 z-[999] flex flex-col 
+            ${scrolled ? "bg-[#EEEDEA] text-black" : "bg-black text-white"}
+          `}
         >
-          {/* Top bar */}
-          <div className="flex justify-between items-center mb-10">
+          {/* Top Bar */}
+          <div className="px-6 py-8 flex justify-between items-center">
             <Image
               src="/archscale_logo.svg"
               width={150}
@@ -52,32 +52,32 @@ export default function MobileMenu({
             </button>
           </div>
 
-          {/* Navigation */}
-          <div className="space-y-6">
-            <p className="uppercase text-sm opacity-60">Navigation</p>
+          {/* Scrollable Menu Area */}
+          <div className="flex-1 overflow-y-auto px-6 pb-20">
+            <p className="uppercase text-sm opacity-60 mb-4">Navigation</p>
+
             <div className="space-y-5 text-lg font-medium">
               {menu.map((item) => (
                 <div key={item.title} className="flex flex-wrap items-center gap-2">
                   <Link href="#" onClick={onClose}>
                     {item.title}
                   </Link>
-                  {item.variants &&
-                    item.variants.map((v) => (
-                      <span
-                        key={v}
-                        className="text-sm opacity-60"
-                      >
-                        {v}
-                      </span>
-                    ))}
+                  {item.variants?.map((v) => (
+                    <span key={v} className="text-sm opacity-60">
+                      {v}
+                    </span>
+                  ))}
                 </div>
               ))}
             </div>
+          </div>
 
-            <p className="uppercase text-sm opacity-60 pt-6">Other</p>
+          {/* Social Section Fixed Bottom */}
+          <div className="px-6 py-4">
+            <p className="uppercase text-sm opacity-60 mb-3">Other</p>
             <div className="space-y-3 text-lg font-medium">
               {social.map((s) => (
-                <Link key={s} href="#" onClick={onClose}>
+                <Link key={s} href="#" onClick={onClose} className="block">
                   {s}
                 </Link>
               ))}

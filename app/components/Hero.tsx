@@ -60,9 +60,12 @@ export const Hero = () => {
 
 
         <div
-  className={`max-w-7xl mx-auto px-6 py-5 flex justify-between items-center transition-colors duration-300
-  ${scrolled ? "text-black" : "text-white"}`}
->
+          className={`max-w-7xl mx-auto px-6 py-5 flex items-center transition-colors duration-300
+  ${scrolled ? "text-black" : "text-white"}
+  justify-between lg:justify-between md:justify-between
+`}
+        >
+
 
           <Image
             src="/archscale_logo.svg"
@@ -74,16 +77,11 @@ export const Hero = () => {
 
 
           {/* ✅ Desktop Nav Links */}
-          <ul className={`hidden lg:flex gap-10 text-[15px] font-semibold transition-colors duration-300 
-  ${scrolled ? "text-black" : "text-white"}`}
+          <ul
+            className={`hidden lg:flex gap-10 text-[15px] font-semibold transition-colors duration-300 
+${scrolled ? "text-black" : "text-white"}`}
           >
-
-            <NavDropdown
-              label="Menu"
-              onOpen={openMega}
-              onClose={closeMega}
-            />
-
+            <NavDropdown label="Menu" onOpen={openMega} onClose={closeMega} />
             <NavLink>About</NavLink>
             <NavLink>Services</NavLink>
             <NavLink>Case Studies</NavLink>
@@ -91,26 +89,33 @@ export const Hero = () => {
           </ul>
 
           {/* ✅ Desktop Button */}
-          <button className="hidden lg:flex ml-6 py-3 px-6 bg-white text-black rounded-full text-[15px] font-semibold hover:bg-gray-100 transition">
-            Buy Template →
-          </button>
+          {/* ✅ Right Section for md & lg */}
+<div className="flex items-center gap-3 md:gap-4">
+  
+  {/* Buy Template button (md & lg only) */}
+  <button
+    className={`hidden md:flex ml-2 py-3 px-6 bg-white text-black rounded-full text-[15px] font-semibold hover:bg-gray-100 transition`}
+  >
+    Buy Template →
+  </button>
 
-          {/* ✅ Mobile Hamburger */}
-          <div
-            className="flex md:hidden cursor-pointer"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <div className="flex flex-col gap-2">
-              <div className={`h-[2px] w-8 transition-colors duration-300 ${scrolled ? "bg-black" : "bg-white"}`}></div>
+  {/* Hamburger (sm & md only) */}
+  <div
+    className="flex lg:hidden cursor-pointer"
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
+    <div className="flex flex-col gap-[5px]">
+      <div className={`h-[2px] w-7 transition-colors duration-300 ${scrolled ? "bg-black" : "bg-white"}`}></div>
+      <div className={`h-[2px] w-7 transition-colors duration-300 ${scrolled ? "bg-black" : "bg-white"}`}></div>
+    </div>
+  </div>
 
-             <div className={`h-[2px] w-8 transition-colors duration-300 ${scrolled ? "bg-black" : "bg-white"}`}></div>
+</div>
 
-            </div>
-          </div>
         </div>
 
         {/* ✅ Mobile Dropdown */}
-       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} scrolled={scrolled} />
+        <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} scrolled={scrolled} />
 
 
 
