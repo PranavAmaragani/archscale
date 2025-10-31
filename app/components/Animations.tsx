@@ -59,8 +59,8 @@ export default function Preloader() {
                 transition={{ duration: 0.8, ease: "easeInOut" }}
                 className="text-2xl font-bold"
               >
-                HOUSEMOOD
-                {/* <Image src="/log.png" alt="houseLogo" height={300} width={300} /> */}
+               
+                <Image src="/archscale_logo.svg" alt="houseLogo" height={200} width={200} />
               </motion.div>
             </div>
 
