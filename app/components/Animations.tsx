@@ -60,7 +60,7 @@ export default function Preloader() {
                 className="text-2xl font-bold"
               >
                
-                <Image src="/archscale_logo.svg" alt="houseLogo" height={200} width={200} />
+                <Image src="/paneluxeBlack.svg" alt="houseLogo" height={200} width={200} />
               </motion.div>
             </div>
 

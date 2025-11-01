@@ -68,9 +68,9 @@ export const Hero = () => {
 
 
           <Image
-            src="/archscale_logo.svg"
+            src="/paneluxeLogo.svg"
             alt="Archscale Logo"
-            width={180}
+             width={180}
             height={40}
             className={`${scrolled ? "brightness-0" : "brightness-0 invert"}`}
           />
@@ -90,27 +90,27 @@ ${scrolled ? "text-black" : "text-white"}`}
 
           {/* ✅ Desktop Button */}
           {/* ✅ Right Section for md & lg */}
-<div className="flex items-center gap-3 md:gap-4">
-  
-  {/* Buy Template button (md & lg only) */}
-  <button
-    className={`hidden md:flex ml-2 py-3 px-6 bg-white text-black rounded-full text-[15px] font-semibold hover:bg-gray-100 transition`}
-  >
-    Buy Template →
-  </button>
+          <div className="flex items-center gap-3 md:gap-4">
 
-  {/* Hamburger (sm & md only) */}
-  <div
-    className="flex lg:hidden cursor-pointer"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
-    <div className="flex flex-col gap-[5px]">
-      <div className={`h-[2px] w-7 transition-colors duration-300 ${scrolled ? "bg-black" : "bg-white"}`}></div>
-      <div className={`h-[2px] w-7 transition-colors duration-300 ${scrolled ? "bg-black" : "bg-white"}`}></div>
-    </div>
-  </div>
+            {/* Buy Template button (md & lg only) */}
+            <button
+              className={`hidden md:flex ml-2 py-3 px-6 bg-white text-black rounded-full text-[15px] font-semibold hover:bg-gray-100 transition`}
+            >
+              Buy Template →
+            </button>
 
-</div>
+            {/* Hamburger (sm & md only) */}
+            <div
+              className="flex lg:hidden cursor-pointer"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <div className="flex flex-col gap-[5px]">
+                <div className={`h-[2px] w-7 transition-colors duration-300 ${scrolled ? "bg-black" : "bg-white"}`}></div>
+                <div className={`h-[2px] w-7 transition-colors duration-300 ${scrolled ? "bg-black" : "bg-white"}`}></div>
+              </div>
+            </div>
+
+          </div>
 
         </div>
 
@@ -141,7 +141,7 @@ ${scrolled ? "text-black" : "text-white"}`}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{
                   duration: 0.55,
-                  ease: [0.22, 1, 0.36, 1], // premium easing
+                  ease: [0.22, 1, 0.36, 1],
                 }}
                 className="w-full"
               >
@@ -168,7 +168,7 @@ ${scrolled ? "text-black" : "text-white"}`}
 
         {/* Heading */}
         <h1 className="text-5xl md:text-[64px] tracking-tighter leading-[1.1] font-semibold max-w-[600px]">
-          Elevate your website with <span>Archscale</span>
+          Elevate your website with <span>Paneluxe</span>
         </h1>
 
         {/* Button */}

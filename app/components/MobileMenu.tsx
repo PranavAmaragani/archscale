@@ -40,7 +40,7 @@ export default function MobileMenu({
           {/* Top Bar */}
           <div className="px-6 py-8 flex justify-between items-center">
             <Image
-              src="/archscale_logo.svg"
+              src="/paneluxeLogo.svg"
               width={150}
               height={40}
               alt="logo"

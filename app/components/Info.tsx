@@ -18,7 +18,7 @@ export const Info = () => {
               <div
                 key={i}
                 className="
-                  flex flex-row justify-around md:gap-0 md:flex-col md:justify-center
+                  flex flex-row justify-around  md:flex-col md:justify-center
                   sm: py-14 md:py-14 pl-6      
                   border-b border-black/10 
                   md:border-b-0 
