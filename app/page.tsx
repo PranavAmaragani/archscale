@@ -7,6 +7,9 @@ import Preloader from "./components/Animations";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Services } from "./components/Services";
+import { Work } from "./components/Work";
+import {CreatorSection} from "./components/CreatorSection";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -34,6 +37,16 @@ export default function Home() {
       <div className="relative z-20">
         <Middle />
       </div>
+      <div className="relative z-30">
+         <Services/>
+      </div>
+      <div className="relative z-30">
+         <Work/>
+      </div>
+      <div className="relative z-30">
+         <CreatorSection/>
+      </div>
+     
       
     </div>
     </div>
