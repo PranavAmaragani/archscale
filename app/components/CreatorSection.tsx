@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const CreatorSection=()=> {
   return (
-    <section className="bg-[#EEEDEA] px-4 md:px-10 py-24">
+    <section className="bg-[#EEEDEA] px-4 md:px-10 py-2">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-[#0E0E0E] text-[#eeedea] rounded-3xl p-8 md:px-16 py-24 flex flex-col md:flex-row justify-between items-center gap-12 md:gap-20">
+        <div className="bg-[#0E0E0E] text-[#eeedea] rounded-3xl p-8 md:px-16 py-16 flex flex-col md:flex-row justify-between items-center gap-12 md:gap-20">
 
           {/* Left */}
           <div className="max-w-2xl">

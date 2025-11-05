@@ -15,7 +15,7 @@ export const ProjectsGrid=()=>{
   ];
 
   return (
-    <section className="bg-[#EEEDEA] py-20 md:px-4">
+    <section className="bg-[#EEEDEA] py-15 md:px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-3 md:gap-5">
 
         {/* 1/3 card */}

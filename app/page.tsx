@@ -10,6 +10,10 @@ import { useRef } from "react";
 import { Services } from "./components/Services";
 import { Work } from "./components/Work";
 import {CreatorSection} from "./components/CreatorSection";
+import { Testimonials } from "./components/Testimonials";
+import { FAQSection } from "./components/FAQSection";
+import { Book } from "./components/Book";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -45,6 +49,18 @@ export default function Home() {
       </div>
       <div className="relative z-30">
          <CreatorSection/>
+      </div>
+      <div className="relative z-30">
+         <Testimonials/>
+      </div>
+      <div className="relative z-30">
+         <FAQSection/>
+      </div>
+      <div className="relative z-30">
+         <Book/>
+      </div>
+      <div className="relative z-30">
+         <Footer/>
       </div>
      
       
